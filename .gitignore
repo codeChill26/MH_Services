@@ -1,7 +1,6 @@
 node_modules/
 dist/
 .npm-cache/
-data/
 server/key_google.json
 server/*.log
 server/*.err
