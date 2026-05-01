@@ -10,6 +10,10 @@ const initialForm = {
 
 const leadApiUrl = import.meta.env.VITE_LEAD_API_URL || '/api/leads';
 
+function normalizePhone(value) {
+  return value.replace(/\D/g, '');
+}
+
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState('idle');
@@ -25,11 +29,19 @@ export default function Contact() {
     setStatus('submitting');
     setError('');
 
+    const phone = normalizePhone(form.phone);
+
+    if (phone.length !== 10) {
+      setStatus('error');
+      setError('Số điện thoại phải đủ 10 số.');
+      return;
+    }
+
     try {
       const response = await fetch(leadApiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, phone }),
       });
       const result = await response.json();
 
@@ -83,6 +95,8 @@ export default function Contact() {
           <input
             name="phone"
             type="tel"
+            inputMode="numeric"
+            pattern="[0-9\s()+.-]{10,}"
             placeholder={contactInfo.phone}
             value={form.phone}
             onChange={handleChange}
