@@ -1,0 +1,33 @@
+<svg width="520" height="520" viewBox="0 0 520 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="520" rx="28" fill="#030712"/>
+  <path d="M122 337V142L239 263L213 291L158 235V337H122Z" fill="url(#blueMark)"/>
+  <path d="M229 337L393 142V337H357V237L282 337H229Z" fill="url(#silverMark)"/>
+  <path d="M282 288H357V315H259L282 288Z" fill="url(#silverMark2)"/>
+  <path d="M248 337H280V373H248V337Z" fill="url(#blueMark2)"/>
+  <path d="M190 360C236 360 274 329 310 285" stroke="url(#swoosh)" stroke-width="20" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="blueMark" x1="122" y1="142" x2="239" y2="337" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63C7FF"/>
+      <stop offset="0.52" stop-color="#1E88E5"/>
+      <stop offset="1" stop-color="#0E3A91"/>
+    </linearGradient>
+    <linearGradient id="blueMark2" x1="248" y1="337" x2="280" y2="373" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#68C9FF"/>
+      <stop offset="1" stop-color="#0E3A91"/>
+    </linearGradient>
+    <linearGradient id="silverMark" x1="229" y1="142" x2="393" y2="337" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1756B5"/>
+      <stop offset="0.48" stop-color="#E6F8FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="silverMark2" x1="259" y1="288" x2="357" y2="315" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C5EFFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="swoosh" x1="190" y1="360" x2="310" y2="285" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E3A91"/>
+      <stop offset="0.5" stop-color="#1E88E5"/>
+      <stop offset="1" stop-color="#E6F8FF"/>
+    </linearGradient>
+  </defs>
+</svg>
